@@ -5,6 +5,9 @@ html {
 a {
     text-decoration: none;
 }
+.grid img {
+    width: 100%;
+}
 
 .grid {
     display: grid;
