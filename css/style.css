@@ -12,6 +12,12 @@ a {
     gap: 10px;
 }
 
+/* Căn ảnh ở giữa mỗi ô */
+.grid > div {
+    text-align: center;
+}
+
+
 /* ===== 772px ===== */
 
 @media screen and (min-width: 772px) {
@@ -23,10 +29,16 @@ a {
         border-radius: 50%;
     }
 
+    /* Ảnh cuối chiếm cả 2 cột */
     .grid > div:last-child {
         grid-column: 1 / span 2;
     }
+
+    .grid > div:last-child img {
+        width: 100%;
+    }
 }
+
 
 /* ===== 992px ===== */
 
@@ -35,12 +47,19 @@ a {
         border-radius: 0;
     }
 
+    /* Mỗi ảnh thứ 3 chiếm cả 2 cột */
     .grid > div:nth-child(3n) {
         grid-column: 1 / span 2;
     }
+
+    /* Ảnh chiếm toàn bộ chiều rộng 2 cột */
+    .grid > div:nth-child(3n) img {
+        width: 100%;
+    }
 }
 
-/* ===== Reduced Motion ===== */
+
+/* ===== Reduced motion ===== */
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -48,7 +67,8 @@ a {
     }
 }
 
-/* ===== Dark Mode ===== */
+
+/* ===== Dark mode ===== */
 
 @media (prefers-color-scheme: dark) {
     body {
