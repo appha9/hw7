@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 a {
     text-decoration: none;
 }
@@ -39,7 +40,7 @@ a {
     }
 }
 
-/* ===== Reduced motion ===== */
+/* ===== Reduced Motion ===== */
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -47,7 +48,7 @@ a {
     }
 }
 
-/* ===== Dark mode ===== */
+/* ===== Dark Mode ===== */
 
 @media (prefers-color-scheme: dark) {
     body {
@@ -59,4 +60,3 @@ a {
         border-color: #eee;
     }
 }
-
