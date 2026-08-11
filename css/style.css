@@ -1,14 +1,15 @@
-
-a{
-  text-decoration: none;
+html {
+    scroll-behavior: smooth;
 }
+a {
+    text-decoration: none;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    margin: 0 auto;
 }
-
 
 /* ===== 772px ===== */
 
@@ -17,28 +18,26 @@ a{
         grid-template-columns: 1fr 1fr;
     }
 
-    figure {
+    .grid > div {
         border-radius: 50%;
     }
 
-    .grid figure:last-child {
+    .grid > div:last-child {
         grid-column: 1 / span 2;
     }
 }
-
 
 /* ===== 992px ===== */
 
 @media screen and (min-width: 992px) {
-    figure {
+    .grid > div {
         border-radius: 0;
     }
 
-    .grid figure:nth-child(3n) {
+    .grid > div:nth-child(3n) {
         grid-column: 1 / span 2;
     }
 }
-
 
 /* ===== Reduced motion ===== */
 
@@ -48,7 +47,6 @@ a{
     }
 }
 
-
 /* ===== Dark mode ===== */
 
 @media (prefers-color-scheme: dark) {
@@ -57,7 +55,7 @@ a{
         color: #eee;
     }
 
-    figure {
+    .grid > div {
         border-color: #eee;
     }
 }
