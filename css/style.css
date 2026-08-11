@@ -5,9 +5,8 @@ html {
 a {
     text-decoration: none;
 }
-.grid img {
-    width: 100%;
-}
+
+/* ===== Default ===== */
 
 .grid {
     display: grid;
@@ -15,9 +14,13 @@ a {
     gap: 10px;
 }
 
-/* Căn ảnh ở giữa mỗi ô */
 .grid > div {
     text-align: center;
+}
+
+.grid img {
+    width: 100%;
+    display: block;
 }
 
 
@@ -32,13 +35,9 @@ a {
         border-radius: 50%;
     }
 
-    /* Ảnh cuối chiếm cả 2 cột */
+    /* Ảnh cuối full 2 cột */
     .grid > div:last-child {
-        grid-column: 1 / span 2;
-    }
-
-    .grid > div:last-child img {
-        width: 100%;
+        grid-column: 1 / -1;
     }
 }
 
@@ -50,19 +49,14 @@ a {
         border-radius: 0;
     }
 
-    /* Mỗi ảnh thứ 3 chiếm cả 2 cột */
+    /* Ảnh 3, 6, 9 full 2 cột */
     .grid > div:nth-child(3n) {
-        grid-column: 1 / span 2;
-    }
-
-    /* Ảnh chiếm toàn bộ chiều rộng 2 cột */
-    .grid > div:nth-child(3n) img {
-        width: 100%;
+        grid-column: 1 / -1;
     }
 }
 
 
-/* ===== Reduced motion ===== */
+/* ===== Reduced Motion ===== */
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -71,7 +65,7 @@ a {
 }
 
 
-/* ===== Dark mode ===== */
+/* ===== Dark Mode ===== */
 
 @media (prefers-color-scheme: dark) {
     body {
