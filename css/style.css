@@ -1,3 +1,82 @@
+/* html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+} */
+
+/* ===== Default =====
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.grid > div {
+    text-align: center;
+}
+
+.grid img {
+    width: 100%;
+    display: block;
+} */
+
+
+/* ===== 772px ===== */
+
+/* @media screen and (min-width: 772px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid > div {
+        border-radius: 50%;
+    }
+
+    /* Ảnh cuối full 2 cột */
+    .grid > div:last-child {
+        grid-column: 1 / -1;
+    }
+} */
+
+
+/* ===== 992px ===== */
+
+/* @media screen and (min-width: 992px) {
+    .grid > div {
+        border-radius: 0;
+    }
+
+    /* Ảnh 3, 6, 9 full 2 cột */
+    .grid > div:nth-child(3n) {
+        grid-column: 1 / -1;
+    }
+} */
+
+
+/* ===== Reduced Motion ===== */
+
+/* @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+} */
+
+
+/* ===== Dark Mode ===== */
+
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+        color: #eee;
+    }
+
+    .grid > div {
+        border-color: #eee;
+    }
+} */
 html {
     scroll-behavior: smooth;
 }
@@ -5,8 +84,6 @@ html {
 a {
     text-decoration: none;
 }
-
-/* ===== Default ===== */
 
 .grid {
     display: grid;
@@ -31,11 +108,10 @@ a {
         grid-template-columns: 1fr 1fr;
     }
 
-    .grid > div {
+    .grid img {
         border-radius: 50%;
     }
 
-    /* Ảnh cuối full 2 cột */
     .grid > div:last-child {
         grid-column: 1 / -1;
     }
@@ -45,18 +121,17 @@ a {
 /* ===== 992px ===== */
 
 @media screen and (min-width: 992px) {
-    .grid > div {
+    .grid img {
         border-radius: 0;
     }
 
-    /* Ảnh 3, 6, 9 full 2 cột */
     .grid > div:nth-child(3n) {
         grid-column: 1 / -1;
     }
 }
 
 
-/* ===== Reduced Motion ===== */
+/* ===== Reduced motion ===== */
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -65,7 +140,7 @@ a {
 }
 
 
-/* ===== Dark Mode ===== */
+/* ===== Dark mode ===== */
 
 @media (prefers-color-scheme: dark) {
     body {
@@ -73,7 +148,7 @@ a {
         color: #eee;
     }
 
-    .grid > div {
+    .grid img {
         border-color: #eee;
     }
 }
